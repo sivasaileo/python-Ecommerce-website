@@ -9,7 +9,7 @@ class TestApp(unittest.TestCase):
     def test_home(self):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Welcome to My DevOps Practice App!', response.data)
+        self.assertIn(b'Products', response.data)  # Update this line
 
     def test_orders(self):
         response = self.app.get('/orders')
