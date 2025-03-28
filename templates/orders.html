@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4 text-center">Orders</h1>
+        <ul class="list-group">
+            {% for order in orders %}
+                <li class="list-group-item">{{ order.name }} - ${{ order.price }}</li>
+            {% endfor %}
+        </ul>
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-secondary">Back to Products</a>
+        </div>
+    </div>
+</body>
+</html>
